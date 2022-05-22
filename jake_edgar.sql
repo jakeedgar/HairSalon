@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `jake_edgar` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `jake_edgar`;
 -- MySQL dump 10.13  Distrib 8.0.27, for macos11 (x86_64)
 --
 -- Host: localhost    Database: jake_edgar
@@ -25,11 +23,11 @@ DROP TABLE IF EXISTS `clients`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `clients` (
-  `client_id` int NOT NULL AUTO_INCREMENT,
-  `client_description` varchar(255) DEFAULT 'null',
-  `client_name` varchar(255) DEFAULT 'null',
-  `client_preferred_style` varchar(255) DEFAULT 'null',
-  PRIMARY KEY (`client_id`)
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `Description` varchar(255) DEFAULT 'null',
+  `Name` varchar(255) DEFAULT 'null',
+  `PreferredStyle` varchar(255) DEFAULT 'null',
+  PRIMARY KEY (`ClientId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,10 +48,10 @@ DROP TABLE IF EXISTS `stylists`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stylists` (
-  `stylist_id` int NOT NULL AUTO_INCREMENT,
-  `stylist_name` varchar(255) DEFAULT 'null',
-  `stylist_specialty` varchar(255) DEFAULT 'null',
-  PRIMARY KEY (`stylist_id`)
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT 'null',
+  `Specialty` varchar(255) DEFAULT 'null',
+  PRIMARY KEY (`StylistId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -75,4 +73,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-21 14:47:33
+-- Dump completed on 2022-05-21 18:21:15
