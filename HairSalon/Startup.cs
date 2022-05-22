@@ -10,11 +10,11 @@ namespace HairSalon
 {
   public class Startup
   {
-    public Startup(IWebHostEnvironment env)
+public Startup(IWebHostEnvironment env)
     {
       var builder = new ConfigurationBuilder()
           .SetBasePath(env.ContentRootPath)
-          .AddEnvironmentVariables();
+          .AddJsonFile("appsettings.json");
       Configuration = builder.Build();
     }
 
@@ -45,10 +45,5 @@ namespace HairSalon
         await context.Response.WriteAsync("leave this place");
       });
     }
-  }
-
-  public static class DBConfiguration
-  {
-    public static string ConnectionString = "server=localhost;user id=root;password=epicodus;port=3306;database=jake_edgar;";
   }
 }
