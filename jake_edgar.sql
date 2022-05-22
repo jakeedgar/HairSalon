@@ -24,9 +24,10 @@ DROP TABLE IF EXISTS `clients`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
-  `Description` varchar(255) DEFAULT 'null',
-  `Name` varchar(255) DEFAULT 'null',
-  `PreferredStyle` varchar(255) DEFAULT 'null',
+  `Description` varchar(255) DEFAULT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+  `PreferredStyle` varchar(255) DEFAULT NULL,
+  `StylistId` int DEFAULT NULL,
   PRIMARY KEY (`ClientId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -49,10 +50,10 @@ DROP TABLE IF EXISTS `stylists`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stylists` (
   `StylistId` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT 'null',
-  `Specialty` varchar(255) DEFAULT 'null',
+  `Name` varchar(255) DEFAULT NULL,
+  `Specialty` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,6 +62,7 @@ CREATE TABLE `stylists` (
 
 LOCK TABLES `stylists` WRITE;
 /*!40000 ALTER TABLE `stylists` DISABLE KEYS */;
+INSERT INTO `stylists` VALUES (1,'Samuel','Short Hair');
 /*!40000 ALTER TABLE `stylists` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -73,4 +75,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-21 18:21:15
+-- Dump completed on 2022-05-21 19:43:05
